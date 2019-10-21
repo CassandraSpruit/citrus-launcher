@@ -1,0 +1,69 @@
+{
+    "name": "vivi-electron-boilerplate",
+    "version": "1.0.0",
+    "description": "General purpose boilerplate code for the Vivi framework with Electron",
+    "main": "./dist/main.js",
+    "scripts": {
+        "flush-all": "rm -r ./dist || true && rm -r ./prod || true",
+        "flush-prod": "rm -r ./prod || true",
+        "nuke": "rm -r ./node_modules",
+        "build": "npm run flush-all && webpack-cli",
+        "build:prod": "npm run flush-prod && webpack-cli --config ./webpack.prod.config.js",
+        "release": "npm run build:prod && electron-builder -p never",
+        "run": "electron .",
+        "watch": "webpack-cli -w",
+        "test": "jest",
+        "server": "cd ./server && composer start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate.git"
+    },
+    "keywords": [
+        "vivi",
+        "electron",
+        "typescript",
+        "boilerplate"
+    ],
+    "author": "Cassandra Spruit",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate/issues"
+    },
+    "homepage": "https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate#readme",
+    "devDependencies": {
+        "@cspruit/vivi": "^2.5.0",
+        "@types/electron": "^1.6.10",
+        "@types/node": "^12.7.5",
+        "bootstrap": "^4.3.1",
+        "css-loader": "^3.2.0",
+        "electron": "^6.0.9",
+        "electron-builder": "^21.2.0",
+        "exceljs": "^2.0.1",
+        "file-loader": "^4.2.0",
+        "font-awesome": "^4.7.0",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "moment": "^2.24.0",
+        "node-sass": "^4.12.0",
+        "rxjs": "^6.5.3",
+        "sass-loader": "^8.0.0",
+        "style-loader": "^1.0.0",
+        "ts-loader": "^6.1.0",
+        "tsconfig-paths-webpack-plugin": "^3.2.0",
+        "typescript": "^3.6.3",
+        "url-loader": "^2.1.0",
+        "webpack": "^4.40.2",
+        "webpack-cli": "^3.3.9"
+    },
+    "dependencies": {
+        "request": "^2.88.0"
+    },
+    "build": {
+        "appId": "com.electron.ViviBoilerplate",
+        "productName": "Vivi Boilerplate",
+        "directories": {
+            "output": "release"
+        }
+    }
+}
