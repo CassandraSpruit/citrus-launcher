@@ -1,6 +1,6 @@
 {
     "name": "vivi-electron-boilerplate",
-    "version": "1.0.0",
+    "version": "2.7.2",
     "description": "General purpose boilerplate code for the Vivi framework with Electron",
     "main": "./dist/main.js",
     "scripts": {
@@ -12,8 +12,7 @@
         "release": "npm run build:prod && electron-builder -p never",
         "run": "electron .",
         "watch": "webpack-cli -w",
-        "test": "jest",
-        "server": "cd ./server && composer start"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -32,7 +31,7 @@
     },
     "homepage": "https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate#readme",
     "devDependencies": {
-        "@cspruit/vivi": "^2.5.0",
+        "@cspruit/vivi": "^2.7.2",
         "@types/electron": "^1.6.10",
         "@types/node": "^12.7.5",
         "bootstrap": "^4.3.1",
