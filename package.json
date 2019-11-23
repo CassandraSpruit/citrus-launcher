@@ -1,7 +1,7 @@
 {
-    "name": "vivi-electron-boilerplate",
-    "version": "2.9.1",
-    "description": "General purpose boilerplate code for the Vivi framework with Electron",
+    "name": "citrus-launcher",
+    "version": "0.0.0",
+    "description": "Minecraft Mod Launcher for the rest of us",
     "main": "./dist/main.js",
     "scripts": {
         "flush-all": "rm -r ./dist || true && rm -r ./prod || true",
@@ -19,10 +19,9 @@
         "url": "git+https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate.git"
     },
     "keywords": [
-        "vivi",
         "electron",
-        "typescript",
-        "boilerplate"
+        "minecraft",
+        "mod"
     ],
     "author": "Cassandra Spruit",
     "license": "GPL-3.0-or-later",
@@ -31,7 +30,7 @@
     },
     "homepage": "https://github.com/CassandraSpruit/Vivi-Electron-Boilerplate#readme",
     "devDependencies": {
-        "@cspruit/vivi": "^2.9.1",
+        "@cspruit/vivi": "^2.9.2",
         "@types/electron": "^1.6.10",
         "@types/node": "^12.7.5",
         "bootstrap": "^4.3.1",
