@@ -1,5 +1,5 @@
 import * as path from 'path';
-import * as fs from 'fs';
+import * as fse from 'fs-extra';
 import * as https from 'https';
 import * as http from 'http';
 import * as request from 'request';
@@ -8,7 +8,7 @@ import { Service } from '@cspruit/vivi/models';
 
 export class SystemService extends Service {
     path: typeof path;
-    fs: typeof fs;
+    fs: typeof fse;
     https: typeof https;
     http: typeof http;
     request: typeof request;
@@ -19,7 +19,7 @@ export class SystemService extends Service {
 
         if (window.require) {
             this.path = window.require('path');
-            this.fs = window.require('fs');
+            this.fs = window.require('fs-extra');
             this.https = window.require('https');
             this.http = window.require('http');
             this.request = window.require('request');
